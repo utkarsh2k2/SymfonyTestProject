@@ -1,0 +1,60 @@
+/.web-server-pid
+/phpunit.xml
+/var/*
+/var/log/*
+!var/log/.gitkeep
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+
+# Email spool folder
+/var/spool/*
+
+/phpunit.xml
+
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+
+/composer.phar
+/.idea
+.idea/php.xml
+.idea/*
+/src/Migrations/
+/web/
+/app/
+
+###> symfony/framework-bundle ###
+.env
+/.env.local
+/.env.local.php
+/.env.*.local
+.env.test
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+phpunit.xml.dist
+###< symfony/phpunit-bridge ###
+###< symfony/web-server-bundle ###
+###> liip/imagine-bundle ###
+###< liip/imagine-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+/public/media/
+/public/uploads/
+/public/js/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
