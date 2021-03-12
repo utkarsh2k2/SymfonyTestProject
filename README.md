@@ -1,5 +1,5 @@
 # SymfonyTestProject
-
+```
 Technologies used:
 	Platform - Windows 10
 	Commandline tool - Git Bash
@@ -46,7 +46,7 @@ API:
 
     JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/privatekey.key
     JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/certificate.crt
-    JWT_PASSPHRASE=gargantua.1 
+    JWT_PASSPHRASE=gargantua.1
 
     Note: The above keys and passphrase are created by me personally and for ease of demonstration I have added these ssl files to the repository, so you don't need to generate them again. In case these don't work for you, you can delete the existing files under SymfonyTest/Project/config/jwt/ folder and generate new ones by running below commands
 	  - cd config/jwt/
@@ -75,3 +75,4 @@ API:
 	Run this url in the browser - http://localhost/SymfonyTestProject/public/index.php/get-orders/yourusername
 
     Both above methods will fetch you the list of existing Orders from the database in JSON fromat
+```
