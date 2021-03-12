@@ -40,8 +40,10 @@ Now you can go to the url http://localhost/SymfonyTestProject/public/index.php/a
     Upon creating a few more orders you will notice that an employee is randomly assigned to the order upon creation. For this I have used Doctrine event subscriber where the request listens to prePersist event of the Order object.
 
 
-API
+API:
+
 11. Copy these lines from .env.dist file to .env
+
     JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/privatekey.key
     JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/certificate.crt
     JWT_PASSPHRASE=gargantua.1 
