@@ -1,5 +1,8 @@
 sonata_admin:
-    title: 'Sonata Admin'
+    security:
+        handler: sonata.admin.security.handler.role
+
+    title: 'Orders App'
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }

@@ -13,6 +13,10 @@ use Sonata\UserBundle\Entity\BaseUser;
  */
 class SonataUserUser extends BaseUser
 {
+    const ROLE_EMPLOYEE = 'ROLE_EMPLOYEE';
+    const ROLE_USER = 'ROLE_USER';
+    const ROLE_ADMIN = 'ROLE_ADMIN';
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -25,10 +29,16 @@ class SonataUserUser extends BaseUser
      */
     protected $orders;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Order", mappedBy="employee")
+     */
+    protected $employeeOrders;
+
     public function __construct() {
         parent::__construct();
 
         $this->orders = new ArrayCollection();
+        $this->employeeOrders = new ArrayCollection();
     }
 
     /**
@@ -62,6 +72,32 @@ class SonataUserUser extends BaseUser
     {
         if($this->orders->contains($order)){
             $this->orders->removeElement($order);
+        }
+    }
+
+    /**
+     * @return Order[]|Collection
+     */
+    public function getEmployeeOrders(): Collection
+    {
+        return $this->employeeOrders;
+    }
+
+    /**
+     * @param Order $order
+     */
+    public function addEmployeeOrder(Order $order): void
+    {
+        $this->employeeOrders[] = $order;
+    }
+
+    /**
+     * @param Order $order
+     */
+    public function removeEmployeeOrder(Order $order): void
+    {
+        if($this->employeeOrders->contains($order)){
+            $this->employeeOrders->removeElement($order);
         }
     }
 }
